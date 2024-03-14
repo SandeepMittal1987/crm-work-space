@@ -64,23 +64,23 @@ export class LoginComponent implements OnInit {
         modalInstance.componentInstance.lib.emailInput.tooltipMsg ='';
         let url = this.appConfigService.URLS.forgotPassword.toString();
         url= url.replace('{email}',forgotInput);
-        // this.apiService
-        //   .GET(url)
-        //   .pipe(catchError((err) => {
-        //     console.log(err);
-        //     return err;
-        //   }))
-        //   .subscribe({
-        //     next: (validate) => {
+        this.apiService
+          .GET(url)
+          .pipe(catchError((err) => {
+            console.log(err);
+            return err;
+          }))
+          .subscribe({
+            next: (validate) => {
               modalInstance.componentInstance.lib = this.crm.emailOtp(
                 modalInstance.componentInstance.lib
               );
               this.uiMessage.success('OTPSENT');
-          //   },
-          //   error: (e) => {
-          //     console.log('OTP API error', e);
-          //   },
-          // });
+            },
+            error: (e) => {
+              console.log('OTP API error', e);
+            },
+          });
       }
 
     });
