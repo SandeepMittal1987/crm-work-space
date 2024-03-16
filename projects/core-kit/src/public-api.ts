@@ -2,8 +2,6 @@
  * Public API Surface of core-kit
  */
 
-import { from } from 'rxjs';
-
 export * from './lib/core-kit.service';
 export * from './lib/core-kit.component';
 export * from './lib/core-kit.module';
