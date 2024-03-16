@@ -7,49 +7,7 @@
       <lib-image class="call" [lib]="crm.supportCall"></lib-image>
       <lib-static-label [lib]="crm.supportMobile"></lib-static-label>
     </div>
-    <!-- <div class="col-6 header-changes">
-      <span><i class="fa fa-globe"></i></span>
-      <lib-dropdown-list class="language" [lib]="crm.language"></lib-dropdown-list>
-    </div> -->
 </div>
 </div>
-<div class="home-centre">
-  <div class="logo">
-    <div class="logo-image"><lib-image [lib]="crm.sidelogo"></lib-image></div>
-    <div class="user-logo">
-      <lib-image class="user-symbol" [lib]="crm.userSymbol"></lib-image>
-      <lib-static-label [lib]="crm.loginText"></lib-static-label>
-    </div>
-    <div class="user-About">
-      <lib-image class="about-us" [lib]="crm.aboutSymbol"></lib-image>
-      <lib-static-label [lib]="crm.aboutusText"></lib-static-label>
-    </div>
-  </div>
-  <div class="info">
-    <div>
-    <div>
-      <lib-static-label [lib]="crm.welcomeNote"></lib-static-label>
-    </div>
-      <div class="company-info">
-        <lib-static-label [lib]="crm.info"></lib-static-label>
-    </div>
-  </div>
-    <div class="social-info">
-      <lib-image class="social-insta" [lib]="crm.instaSymbol"></lib-image>
-      <lib-image class="social-facebook" [lib]="crm.facebookSymbol"></lib-image>
-      <lib-image class="social-youtube" [lib]="crm.youtubeSymbol"></lib-image>
-      <lib-image class="social-x_logo" [lib]="crm.xSymbol"></lib-image>
-      <lib-image class="social-linkedIn" [lib]="crm.linkedinSymbol"></lib-image>
-    </div>
-  </div>
-  <div class="login-details">
-    <lib-static-label [lib]="crm.loginHeading"></lib-static-label>
-    <lib-static-label [lib]="crm.loginMessage"></lib-static-label>
-    <lib-input-box class="userId" [lib]="crm.userId"></lib-input-box>
-    <lib-extend-input-control class="password" [lib]="crm.password" (customSuffixClick)="forgotPopup($event)"></lib-extend-input-control>
-    <lib-checkbox class="remember-me" [lib]="crm.rememberMe"></lib-checkbox>
-    <lib-button class="login-cta" [lib]="crm.loginCTA" (triggerClick) = "loginClick($event)"></lib-button>
-  </div>
-
-</div>
+<lib-login-page [lib]="crm" (forgotPopup)="forgotPopup()" (loginClick)="loginClick()"></lib-login-page>
 </div>

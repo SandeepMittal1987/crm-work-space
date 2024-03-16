@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginModel } from './login.model';
 import { ConfigService } from '../core/services/util-service.service';
 import {
   ForgotPasswordComponent,
+  LoginModel,
   PopupService,
   StaticLabelControl,
 } from 'projects/core-kit/src/public-api';
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
     this.crm.language.value = this.appLoader.getLocaleId();
   }
 
-  forgotPopup(event) {
+  forgotPopup() {
     this.modalService.dialogConfig.panelClass = 'forgotPassword';
     this.forgotPassword = new ForgotPassword();
     const modalInstance = this.modalService.open(ForgotPasswordComponent);
@@ -151,7 +151,7 @@ export class LoginComponent implements OnInit {
     
   }
 
-  loginClick(event) {
+  loginClick() {
     if (this.crm.userId.value == '' || this.crm.password.value == '') {
       if (this.crm.userId.value == '') {
         this.crm.userId.isValid = false;

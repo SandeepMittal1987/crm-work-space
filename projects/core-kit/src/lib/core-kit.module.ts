@@ -34,9 +34,11 @@ import { StaticLabelComponent } from './core/static-label/static-label.component
 import { DropdownListComponent } from './core/dropdown-list/dropdown-list.component';
 import { ImageComponent } from './core/image/image.component';
 import { CheckboxComponent } from './core/checkbox/checkbox.component';
-import { ForgotPasswordComponent } from './models/widgets/forgot-password/forgot-password.component';
 import { DynamicLabelComponent } from './core/dynamic-label/dynamic-label.component';
 import { LinkComponent } from './core/link/link.component';
+
+import { ForgotPasswordComponent } from './models/widgets/forgot-password/forgot-password.component';
+import { LoginPageComponent } from './models/widgets/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,7 @@ import { LinkComponent } from './core/link/link.component';
     ExtendInputControlComponent,
     InputBoxComponent,
     StaticLabelComponent,
-    DropdownListComponent, ImageComponent, CheckboxComponent, ForgotPasswordComponent, DynamicLabelComponent, LinkComponent
+    DropdownListComponent, ImageComponent, CheckboxComponent, ForgotPasswordComponent, DynamicLabelComponent, LinkComponent, LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +85,7 @@ import { LinkComponent } from './core/link/link.component';
     ExtendInputControlComponent,
     InputBoxComponent,
     StaticLabelComponent,
-    DropdownListComponent, ImageComponent, CheckboxComponent, ForgotPasswordComponent, DynamicLabelComponent, LinkComponent
+    DropdownListComponent, ImageComponent, CheckboxComponent, ForgotPasswordComponent, DynamicLabelComponent, LinkComponent, LoginPageComponent
   ],
   providers: [TranslateService],
 })
