@@ -5,29 +5,29 @@ import { Icore } from "../models/interfaces/icore";
 export class ForgotPassword implements Icore {
     isHide= false;
     width= '';
-    crossBtn= new ImageControl('','cross');
-    companyLogo = new ImageControl('','company-logo');
-    passwordLock = new ImageControl('','password-lock');
-    forgotTitle= new StaticLabelControl();
-    forgotHint= new StaticLabelControl();
-    emailMobile= new StaticLabelControl();
-    emailInput = new InputControl('email','', true);
-    backbutton= new ImageControl ('', 'back-btn');
-    backText= new StaticLabelControl();
-    nextBtn = new Button('','');
+    crossBtn!: ImageControl;
+    companyLogo!: ImageControl;
+    passwordLock!:  ImageControl;
+    forgotTitle!: StaticLabelControl;
+    forgotHint!: StaticLabelControl;
+    emailMobile!: StaticLabelControl;
+    emailInput!: InputControl;
+    backbutton!: ImageControl;
+    backText!: StaticLabelControl;
+    nextBtn!: Button;
     isinputDetailsShow: boolean;
     isOtpDetails: boolean;
-    otpTitle= new StaticLabelControl();
+    otpTitle!: StaticLabelControl;
     otpHint = new DynamicLabelControl('hint','OTPhint.FormatText','otp-hint',[],[]);
-    otpNextBtn= new Button('','');
-    resendLink= new Link('');
-    resendText = new StaticLabelControl();
-    optError = new StaticLabelControl();
+    otpNextBtn!: Button;
+    resendLink!: Link;
+    resendText!: StaticLabelControl;
+    optError!: StaticLabelControl;
     isNewPassword = false;
-    resetTitle = new StaticLabelControl();
-    resetHint = new StaticLabelControl();
-    newPassword = new StaticLabelControl();
-    confirmPassword = new StaticLabelControl();
+    resetTitle!: StaticLabelControl;
+    resetHint!: StaticLabelControl
+    newPassword!: StaticLabelControl
+    confirmPassword!: StaticLabelControl
     newPwd!:InputControl;
     resetPwd!: InputControl;
     resetPassword: Button;

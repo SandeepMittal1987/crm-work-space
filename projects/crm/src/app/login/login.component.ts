@@ -1,17 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginModel } from './login.model';
 import { ConfigService } from '../core/services/util-service.service';
-import {
-  ForgotPasswordComponent,
-  PopupService,
-  StaticLabelControl,
-} from 'projects/core-kit/src/public-api';
+import { ForgotPasswordComponent, LoginModel, PopupService, StaticLabelControl} from 'projects/core-kit/src/public-api';
+
 import { ForgotPassword } from 'projects/core-kit/src/lib/widgets/forgot-password';
 import { ApiService } from '../core/services/api-service/api.service';
 import { AppConfigService } from '../core/services/app-config.service';
 import { catchError, map } from 'rxjs/operators';
 import { UiMessageService } from '../core/services/ui-message-service/ui-message.service';
-import { NgOtpInputConfig } from 'ng-otp-input';
 
 @Component({
   selector: 'crm-login',
@@ -20,7 +15,6 @@ import { NgOtpInputConfig } from 'ng-otp-input';
 })
 export class LoginComponent implements OnInit {
   crm: LoginModel;
-  forgotPassword: ForgotPassword;
   constructor(
     private appLoader: ConfigService,
     private modalService: PopupService,
@@ -46,12 +40,12 @@ export class LoginComponent implements OnInit {
     this.crm.language.value = this.appLoader.getLocaleId();
   }
 
-  forgotPopup(event) {
+  forgotPopup() {
     this.modalService.dialogConfig.panelClass = 'forgotPassword';
-    this.forgotPassword = new ForgotPassword();
+    let forgotPassword = new ForgotPassword();
     const modalInstance = this.modalService.open(ForgotPasswordComponent);
     modalInstance.disableClose = false;
-    const data = this.crm.forgotPasswordPopup(this.forgotPassword);
+    const data = this.crm.forgotPasswordPopup(forgotPassword);
     modalInstance.componentInstance.lib = data;
     modalInstance.componentInstance.nextEvent.subscribe((e) => {
       const forgotInput = modalInstance.componentInstance.lib.emailInput.value ? modalInstance.componentInstance.lib.emailInput.value : '';
@@ -151,7 +145,7 @@ export class LoginComponent implements OnInit {
     
   }
 
-  loginClick(event) {
+  loginClick() {
     if (this.crm.userId.value == '' || this.crm.password.value == '') {
       if (this.crm.userId.value == '') {
         this.crm.userId.isValid = false;

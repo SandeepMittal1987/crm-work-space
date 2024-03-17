@@ -2,8 +2,6 @@
  * Public API Surface of core-kit
  */
 
-
-
 export * from './lib/core-kit.service';
 export * from './lib/core-kit.component';
 export * from './lib/core-kit.module';
@@ -19,7 +17,6 @@ export * from './lib/models/interfaces/iImage-control';
 export * from './lib/models/interfaces/iCheckbox-control.interface';
 export * from './lib/models/interfaces/idynamic-label.interface';                           
 
-
 export * from './lib/core/button/button.component';
 export * from './lib/core/extend-input-control/extend-input-control.component';
 export * from './lib/core/input-box/input-box.component';
@@ -30,6 +27,7 @@ export * from './lib/core/checkbox/checkbox.component';
 export * from './lib/core/dynamic-label/dynamic-label.component';
 export * from './lib/core/link/link.component';
 
+export * from './lib/models/widgets/login-page/login-page.component'
 export * from './lib/models/widgets/forgot-password/forgot-password.component';
 export * from './lib/models/widgets/header/header.component';
 
@@ -48,5 +46,6 @@ export * from './lib/models/core/link';
 
 export * from './lib/widgets/header';
 export * from './lib/widgets/forgot-password';
+export * from './lib/widgets/login.model';
 
 export * from './lib/models/model/image-data-model';
