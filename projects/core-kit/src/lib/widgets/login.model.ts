@@ -58,9 +58,9 @@ export class LoginModel {
         forgotLib.isinputDetailsShow= true;
         forgotLib.isOtpDetails = false;
         forgotLib.isNewPassword = false;
-        forgotLib.crossBtn= new ImageControl('../assets/images/Close-Button-icon.svg','','','','','cross-btn');
-        forgotLib.companyLogo = new ImageControl('../assets/images/SKYDECOR-Logo-latest.svg','','','','','company-logo');
-        forgotLib.passwordLock = new ImageControl('../assets/images/Forgot-password-img.png','','','','','password-lock');
+        forgotLib.crossBtn= new ImageControl('../assets/images/Close-Button-icon.svg','cross','','','','cross-btn');
+        forgotLib.companyLogo = new ImageControl('../assets/images/SKYDECOR-Logo-latest.svg','company-logo','','','','company-logo');
+        forgotLib.passwordLock = new ImageControl('../assets/images/Forgot-password-img.png','password-lock','','','','password-lock');
         forgotLib.emailInput = new InputControl('forgot-email','LABELS.USERID', true,'');
         forgotLib.emailInput.cssClass='forgot-email-input';
         forgotLib.forgotTitle = new StaticLabelControl('forgot-Title', "LABELS.FORGOTPASSWORDPOPUP",'forgot-CSS');

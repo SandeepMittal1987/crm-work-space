@@ -12,7 +12,7 @@
     "strictPropertyInitialization": false
   },
   "angularCompilerOptions": {
-    "compilationMode": "partial",
+    "compilationMode": "full",
     "strictInjectionParameters": false,
     "StrictInputAccessModifiers": false,
     "strictTemplates": false

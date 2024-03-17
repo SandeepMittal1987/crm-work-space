@@ -5,7 +5,7 @@
         "localhost:4200":{
             "loginUrl": "localhost:4200",
             "urls": {
-                "emailLogin":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/userLogin/email",
+                "emailLogin":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/userLogin/emailOrPhone",
                 "mobileLogin":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/userLogin/mobile",
                 "forgotPassword":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/forgetPasswordEmail/{email}",
                 "otpValidate":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/otpValidate",
