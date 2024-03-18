@@ -13,7 +13,7 @@
         "PASSWORD": "Password",
         "FORGOTPASSWORD": "Forgot Password?",
         "FORGOTPASSWORDPOPUP":"FORGOT PASSWORD",
-        "FORGOTHINT":"Forgot Hint",
+        "FORGOTHINT":"No worries! Your new password is just few clicks away.",
         "REMEMBERME": "Remember Me!",
         "NEXT": "Next",
         "OTPEMAILBACKBTN": "Tap here to go back to edit the <br /><span class='otp-back-device'>\"Email id\"</span>",
