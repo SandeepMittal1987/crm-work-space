@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "runcrm": "ng build core-kit & npm install dist/core-kit & ng build crm & ng serve crm -o"
+    "runcrm": "ng build core-kit & npm install dist/core-kit --save & ng build crm & ng serve crm -o"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +34,7 @@
     "ng-otp-input": "^1.9.3",
     "ngx-spinner": "^16.0.2",
     "ngx-translate-multi-http-loader": "^17.0.0",
+    "core-kit":"file:dist/core-kit",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

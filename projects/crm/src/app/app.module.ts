@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { FormsModule } from '@angular/forms';
-import { CoreKitModule } from '../../../core-kit/src/lib/core-kit.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient,HttpClientModule, HTTP_INTERCEPTORS, HttpBackend } from '@angular/common/http';
 import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
@@ -25,6 +24,7 @@ import { LoginRoutingModule } from './login/login-routing.module';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { LayoutComponent } from './layout/layout.component';
 import { EmpProfileComponent } from './emp-profile/emp-profile.component';
+import { CoreKitModule } from 'core-kit';
 
 export function HttpLoaderFactory(http:HttpBackend): MultiTranslateHttpLoader {
   return new MultiTranslateHttpLoader(http, [{
