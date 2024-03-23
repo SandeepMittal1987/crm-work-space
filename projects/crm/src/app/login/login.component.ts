@@ -5,8 +5,9 @@ import { ForgotPasswordComponent, LoginModel, PopupService, StaticLabelControl} 
 import { ForgotPassword } from 'projects/core-kit/src/lib/widgets/forgot-password';
 import { ApiService } from '../core/services/api-service/api.service';
 import { AppConfigService } from '../core/services/app-config.service';
-import { catchError, map } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import { UiMessageService } from '../core/services/ui-message-service/ui-message.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'crm-login',
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit {
     private modalService: PopupService,
     private apiService: ApiService,
     private appConfigService: AppConfigService,
-    private uiMessage: UiMessageService
+    private uiMessage: UiMessageService,
+    private router: Router
   ) {
     this.crm = new LoginModel();
     this.declareLanguage();
@@ -161,6 +163,7 @@ export class LoginComponent implements OnInit {
       this.apiService.POST(url, params).subscribe((validate) => {
         this.appConfigService.setAuthTokenAndUser(validate.token);
         this.uiMessage.success('LOGINSUCCESS');
+        this.router.navigateByUrl('/profile')
       });
     }
   }

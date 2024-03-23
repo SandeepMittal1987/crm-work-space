@@ -13,6 +13,18 @@
                 "forgetPassword":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/forgetPassword",
                 "dashboard":""
             }
+        },
+        "http://crm.skydecor.in/":{
+            "loginUrl": "http://crm.skydecor.in/",
+            "urls": {
+                "emailLogin":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/userLogin/emailOrPhone",
+                "mobileLogin":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/userLogin/mobile",
+                "forgotPassword":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/forgetPasswordEmail/{email}",
+                "otpValidate":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/otpValidate",
+                "changePassword":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/changePassword",
+                "forgetPassword":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/forgetPassword",
+                "dashboard":""
+            }
         }
     }
 }
