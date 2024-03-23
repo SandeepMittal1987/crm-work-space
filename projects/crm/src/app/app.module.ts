@@ -18,12 +18,13 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatButtonModule } from "@angular/material/button";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatDialogModule } from "@angular/material/dialog";
-import { Platform } from '@angular/cdk/platform';
 import { ConfigService } from './core/services/util-service.service';
 import * as locale_en from '@angular/common/locales/en';
 import { LoginComponent } from './login/login.component';
 import { LoginRoutingModule } from './login/login-routing.module';
 import { NgOtpInputModule } from 'ng-otp-input';
+import { LayoutComponent } from './layout/layout.component';
+import { EmpProfileComponent } from './emp-profile/emp-profile.component';
 
 export function HttpLoaderFactory(http:HttpBackend): MultiTranslateHttpLoader {
   return new MultiTranslateHttpLoader(http, [{
@@ -49,9 +50,11 @@ export function appInit(appConfigService:AppConfigService):any{
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,LoginComponent
-  ],
+  declarations: [		
+    AppComponent,LoginComponent,
+      LayoutComponent,
+      EmpProfileComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -77,7 +80,7 @@ export function appInit(appConfigService:AppConfigService):any{
     DatePipe,
     {provide:HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},
     {provide: APP_INITIALIZER, useFactory: appInit, multi: true, deps: [AppConfigService]},
-    {provide: LocationStrategy, useClass: HashLocationStrategy},
+    // {provide: LocationStrategy, useClass: HashLocationStrategy},
     {provide: ErrorHandler, useClass: AppErrorHandlerService},
     {provide: LOCALE_ID, deps: [ConfigService], useFactory:getCulture},
     provideAnimationsAsync()
