@@ -14,7 +14,7 @@
                 "dashboard":""
             }
         },
-        "http://crm.skydecor.in/":{
+        "crm.skydecor.in":{
             "loginUrl": "http://crm.skydecor.in/",
             "urls": {
                 "emailLogin":"https://uuor3m2oka.execute-api.ap-south-1.amazonaws.com/skydecorCRM/auth/v1/userLogin/emailOrPhone",
